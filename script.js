@@ -121,7 +121,7 @@ var Snake = (function () {
       }
 
       if(!stopped) {
-        ctx.fillStyle = 'rgba(200,200,200,0.2)';
+        ctx.fillStyle = '#D0CBC7';'rgba(200,200,200,0.2)';
         ctx.font = "small-caps 14px Helvetica";
         ctx.fillText("(esc) reset", 17, 362);
         ctx.fillText("(space) pause", 17, 380);
