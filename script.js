@@ -141,7 +141,7 @@ var Snake = (function () {
         if(!fixedTail) tail++;
         points++;
         if(points > pointsMax) pointsMax = points;
-        reward = 0;
+        reward = 1;
         game.RandomFruit();
         //make sure new fruit didn't spawn in snake tail
         while((function () {
