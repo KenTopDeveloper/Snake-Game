@@ -121,7 +121,7 @@ var Snake = (function () {
       }
 
       if(!stopped) {
-        ctx.fillStyle = 'grey';'rgba(200,200,200,0.2)';
+        ctx.fillStyle = 'grey','rgba(200,200,200,0.2)';
         ctx.font = "small-caps 14px Helvetica";
         ctx.fillText("(esc) reset", 17, 362);
         ctx.fillText("(space) pause", 17, 380);
@@ -142,8 +142,7 @@ var Snake = (function () {
         points++;
         if(points > pointsMax) pointsMax = points;
         reward = 1;
-        game.RandomFruit();
-        //make sure new fruit didn't spawn in snake tail
+        game.RandomFruit(); //make sure new fruit didn't spawn in snake tail
         while((function () {
           for(var i=0; i<trail.length; i++) {
             if (trail[i].x == fruit.x && trail[i].y == fruit.y) {
@@ -158,7 +157,7 @@ var Snake = (function () {
       ctx.fillStyle = 'red';
       ctx.fillRect(fruit.x * gridSize+1, fruit.y * gridSize+1, gridSize-2, gridSize-2);
       if(stopped) {
-        ctx.fillStyle = '#D0CBC7';'rgba(250,250,250,0.8)';
+        ctx.fillStyle = '#D0CBC7','rgba(250,250,250,0.8)';
         ctx.font = "small-caps bold 14px Helvetica";
         ctx.fillText("Press arrow keys to start…", 20, 380);
       }
